@@ -31,7 +31,7 @@ class Quarterback(Player):
     '''
     def __init__(self, name=None, yards=130, touchdowns=5, completed_passes=20,
                  interceptions=4, safety=None, field_goals=None):
-        super().__init__(name=name, yards=yards, touchdowns=touchdowns,
+        super(self, Player).__init__(name=name, yards=yards, touchdowns=touchdowns,
                          safety=safety, interceptions=interceptions)
         self.completed_passes = completed_passes
 
