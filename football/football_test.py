@@ -45,6 +45,11 @@ class FootballPlayerTest(unittest.TestCase):
         qb = Quarterback(name='FancyDude')
         self.assertEqual(qb.interceptions, 4)
 
+
+    def test_default_qb_completed_passes(self):
+        qb = Quarterback()
+        self.assertEqual(qb.completed_passes, 20)
+
     def test_passing_score(self):
         qb = Quarterback()
         self.assertEqual((20 - (2 * 4)), qb.passing_score())
